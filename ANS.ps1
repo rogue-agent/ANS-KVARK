@@ -19,10 +19,10 @@ Do {
     $MainMenu = Read-Host -Prompt 'Enter 1 - 6 or Q to quit'
     Switch ($MainMenu) {
         3 {Start-Process "mailto:it@motion-center.de?Subject=ANS-Kvark : Contact"}
-        4 {New-Item -Path ~\desktop\ -Name 'Fernsteuerung.rdp' -ItemType file
+        4 {New-Item -Path "$env:Temp" -Name 'Fernsteuerung.rdp' -ItemType file
             #Config RDP Settings
             #invoke-expression -Command .\Config_RDP_Settings.ps1
-            & Start-Process -FilePath "$env:softinsta\Config_RDP_Settings.ps1"}
+            & $env:softinsta\Config_RDP_Settings.ps1}
         2 {Start-Process -FilePath "$env:mediacreation\latest.exe"}
         5 {Start-Process -FilePath "$env:softinsta\standard.ps1"}
         6 {Start-Process -FilePath "ms-settings:recovery" }
