@@ -22,7 +22,14 @@ Do {
         4 {New-Item -Path "$env:Temp" -Name 'Fernsteuerung.rdp' -ItemType file
             #Config RDP Settings
             #invoke-expression -Command .\Config_RDP_Settings.ps1
-            & $env:softinsta\Config_RDP_Settings.ps1}
+            & $env:softinsta\Config_RDP_Settings.ps1
+            $TargetFile = "$env:Temp\Fernsteuerung.rdp"
+            $ShortcutFile = "$env:usrpr\Desktop\Fernsteuerung.lnk"
+            $WScriptShell = New-Object -ComObject WScript.Shell
+            $Shortcut = $WScriptShell.CreateShortcut($ShortcutFile)
+            $Shortcut.TargetPath = $TargetFile
+            $Shortcut.Save()
+        }
         2 {Start-Process -FilePath "$env:mediacreation\latest.exe"}
         5 {Start-Process -FilePath "$env:softinsta\standard.ps1"}
         6 {Start-Process -FilePath "ms-settings:recovery" }
