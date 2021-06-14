@@ -359,3 +359,6 @@ Do {
 } Until (
     $MainMenu -eq 'Q'
 )
+Clear-Host
+Write-Host "You have Ended the session"
+pause
