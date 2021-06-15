@@ -18,7 +18,7 @@ Do {
 
     $MainMenu = Read-Host -Prompt 'Enter 1 - 6 or Q to quit'
     Switch ($MainMenu) {
-        3 {Start-Process "mailto:it@motion-center.de?Subject=ANS-Kvark : Contact"}
+        3 {Start-Process "mailto:it@motion-center.de?Subject=ANS-Kvark : Contact" Clear-Host}
         4 {New-Item -Path "$env:Temp" -Name 'Fernsteuerung.rdp' -ItemType file
             #Config RDP Settings
             #invoke-expression -Command .\Config_RDP_Settings.ps1
@@ -29,11 +29,12 @@ Do {
             $Shortcut = $WScriptShell.CreateShortcut($ShortcutFile)
             $Shortcut.TargetPath = $TargetFile
             $Shortcut.Save()
+            Clear-Host
         }
-        2 {Start-Process -FilePath "$env:mediacreation\latest.exe"}
-        5 {Start-Process -FilePath "$env:softinsta\standard.ps1"}
-        6 {Start-Process -FilePath "ms-settings:recovery" }
-        1 {
+        2 {Start-Process -FilePath "$env:mediacreation\latest.exe" Clear-Host}
+        5 {Start-Process -FilePath "$env:softinsta\standard.ps1" Clear-Host}
+        6 {Start-Process -FilePath "ms-settings:recovery" Clear-Host}
+        1 {Clear-Host
             Do {
 @'
 
@@ -59,9 +60,10 @@ Do {
 
 '@
                 $1MainMenu = Read-Host -Prompt 'Enter 1 - 16 or B for Back'
+                Clear-Host
                 Switch ($1MainMenu) {
-                    '0' {}
-                    '1' {
+                    '0' {Clear-Host}
+                    '1' {Clear-Host
                             Do {
 @'
 
@@ -73,12 +75,12 @@ Do {
 '@
                                 $1InnerMenu = Read-Host -Prompt 'Enter 1 - 3 or B for Back'
                                 Switch ($1InnerMenu) {
-                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break}
-                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break}
+                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break; Clear-Host}
+                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break; Clear-Host}
                                 }
-                            } Until ($1InnerMenu -eq 'B')
+                            } Until ($1InnerMenu -eq 'B') Clear-Host
                         }
-                    '2' {
+                    '2' {Clear-Host
                             Do {
 @'
 
@@ -90,12 +92,12 @@ Do {
 '@
                                 $1InnerMenu = Read-Host -Prompt 'Enter 1 - 3 or B for Back'
                                 Switch ($1InnerMenu) {
-                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break}
-                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break}
+                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break; Clear-Host}
+                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break; Clear-Host}
                                 }
-                            } Until ($1InnerMenu -eq 'B')
+                            } Until ($1InnerMenu -eq 'B') Clear-Host
                         }
-                    '3' {
+                    '3' {Clear-Host
                             Do {
 @'
 
@@ -107,12 +109,12 @@ Do {
 '@
                                 $1InnerMenu = Read-Host -Prompt 'Enter 1 - 3 or B for Back'
                                 Switch ($1InnerMenu) {
-                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break}
-                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break}
+                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break; Clear-Host}
+                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break; Clear-Host}
                                 }
-                            } Until ($1InnerMenu -eq 'B')
+                            } Until ($1InnerMenu -eq 'B') Clear-Host
                         }
-                    '4' {
+                    '4' {Clear-Host
                             Do {
 @'
 
@@ -124,12 +126,12 @@ Do {
 '@
                                 $1InnerMenu = Read-Host -Prompt 'Enter 1 - 3 or B for Back'
                                 Switch ($1InnerMenu) {
-                                 '1' {Start-Process -FilePath "$env:softinsta\iview452g_x64_setup.exe"; break}
-                                 '2' {Start-Process -FilePath "$env:softinsta\iview452g_setup.exe"; break}
+                                 '1' {Start-Process -FilePath "$env:softinsta\iview452g_x64_setup.exe"; break; Clear-Host}
+                                 '2' {Start-Process -FilePath "$env:softinsta\iview452g_setup.exe"; break; Clear-Host}
                                 }
-                            } Until ($1InnerMenu -eq 'B')
+                            } Until ($1InnerMenu -eq 'B') Clear-Host
                         }
-                    '5' {
+                    '5' {Clear-Host
                             Do {
 @'
 
@@ -141,12 +143,12 @@ Do {
 '@
                                 $1InnerMenu = Read-Host -Prompt 'Enter 1 - 3 or B for Back'
                                 Switch ($1InnerMenu) {
-                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break}
-                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break}
+                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break; Clear-Host}
+                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break; Clear-Host}
                                 }
-                            } Until ($1InnerMenu -eq 'B')
+                            } Until ($1InnerMenu -eq 'B') Clear-Host
                         }
-                    '6' {
+                    '6' {Clear-Host
                             Do {
 @'
 
@@ -158,12 +160,12 @@ Do {
 '@
                                 $1InnerMenu = Read-Host -Prompt 'Enter 1 - 3 or B for Back'
                                 Switch ($1InnerMenu) {
-                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break}
-                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break}
+                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break; Clear-Host}
+                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break; Clear-Host}
                                 }
-                            } Until ($1InnerMenu -eq 'B')
+                            } Until ($1InnerMenu -eq 'B') Clear-Host
                         }
-                    '7' {
+                    '7' {Clear-Host
                             Do {
 @'
 
@@ -175,12 +177,12 @@ Do {
 '@
                                 $1InnerMenu = Read-Host -Prompt 'Enter 1 - 3 or B for Back'
                                 Switch ($1InnerMenu) {
-                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break}
-                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break}
+                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break; Clear-Host}
+                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break; Clear-Host}
                                 }
-                            } Until ($1InnerMenu -eq 'B')
+                            } Until ($1InnerMenu -eq 'B') Clear-Host
                         }
-                    '8' {
+                    '8' {Clear-Host
                             Do {
 @'
 
@@ -193,12 +195,12 @@ Do {
 '@
                                 $1InnerMenu = Read-Host -Prompt 'Enter 1 - 3 or B for Back'
                                 Switch ($1InnerMenu) {
-                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break}
-                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break}
+                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break; Clear-Host}
+                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break; Clear-Host}
                                 }
-                            } Until ($1InnerMenu -eq 'B')
+                            } Until ($1InnerMenu -eq 'B') Clear-Host
                         }
-                    '9' {
+                    '9' {Clear-Host
                             Do {
 @'
 
@@ -210,12 +212,12 @@ Do {
 '@
                                 $1InnerMenu = Read-Host -Prompt 'Enter 1 - 3 or B for Back'
                                 Switch ($1InnerMenu) {
-                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break}
-                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break}
+                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break; Clear-Host}
+                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break; Clear-Host}
                                 }
-                            } Until ($1InnerMenu -eq 'B')
+                            } Until ($1InnerMenu -eq 'B') Clear-Host
                         }
-                    '10' {
+                    '10' {Clear-Host
                             Do {
 @'
 
@@ -227,12 +229,12 @@ Do {
 '@
                                 $1InnerMenu = Read-Host -Prompt 'Enter 1 - 3 or B for Back'
                                 Switch ($1InnerMenu) {
-                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break}
-                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break}
+                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break; Clear-Host}
+                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break; Clear-Host}
                                 }
-                            } Until ($1InnerMenu -eq 'B')
+                            } Until ($1InnerMenu -eq 'B') Clear-Host
                         }
-                    '11' {
+                    '11' {Clear-Host
                             Do {
 @'
 
@@ -244,12 +246,12 @@ Do {
 '@
                                 $1InnerMenu = Read-Host -Prompt 'Enter 1 - 3 or B for Back'
                                 Switch ($1InnerMenu) {
-                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break}
-                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break}
+                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break; Clear-Host}
+                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break; Clear-Host}
                                 }
-                            } Until ($1InnerMenu -eq 'B')
+                            } Until ($1InnerMenu -eq 'B') Clear-Host
                         }
-                    '12' {
+                    '12' {Clear-Host
                             Do {
 @'
 
@@ -261,12 +263,12 @@ Do {
 '@
                                 $1InnerMenu = Read-Host -Prompt 'Enter 1 - 3 or B for Back'
                                 Switch ($1InnerMenu) {
-                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break}
-                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break}
+                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break; Clear-Host}
+                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break; Clear-Host}
                                 }
-                            } Until ($1InnerMenu -eq 'B')
+                            } Until ($1InnerMenu -eq 'B') Clear-Host
                         }
-                    '13' {
+                    '13' {Clear-Host
                             Do {
 @'
 
@@ -278,12 +280,12 @@ Do {
 '@
                                 $1InnerMenu = Read-Host -Prompt 'Enter 1 - 3 or B for Back'
                                 Switch ($1InnerMenu) {
-                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break}
-                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break}
+                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break; Clear-Host}
+                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break; Clear-Host}
                                 }
-                            } Until ($1InnerMenu -eq 'B')
+                            } Until ($1InnerMenu -eq 'B') Clear-Host
                         }
-                    '14' {
+                    '14' {Clear-Host
                             Do {
 @'
 
@@ -295,12 +297,12 @@ Do {
 '@
                                 $1InnerMenu = Read-Host -Prompt 'Enter 1 - 3 or B for Back'
                                 Switch ($1InnerMenu) {
-                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break}
-                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break}
+                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break; Clear-Host}
+                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break; Clear-Host}
                                 }
-                            } Until ($1InnerMenu -eq 'B')
+                            } Until ($1InnerMenu -eq 'B') Clear-Host
                         }
-                    '15' {
+                    '15' {Clear-Host
                             Do {
 @'
 
@@ -312,12 +314,12 @@ Do {
 '@
                                 $1InnerMenu = Read-Host -Prompt 'Enter 1 - 3 or B for Back'
                                 Switch ($1InnerMenu) {
-                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break}
-                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break}
+                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break; Clear-Host}
+                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break; Clear-Host}
                                 }
-                            } Until ($1InnerMenu -eq 'B')
+                            } Until ($1InnerMenu -eq 'B') Clear-Host
                         }
-                    '16' {
+                    '16' {Clear-Host
                             Do {
 @'
 
@@ -329,12 +331,12 @@ Do {
 '@
                                 $1InnerMenu = Read-Host -Prompt 'Enter 1 - 3 or B for Back'
                                 Switch ($1InnerMenu) {
-                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break}
-                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break}
+                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break; Clear-Host}
+                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break; Clear-Host}
                                 }
-                            } Until ($1InnerMenu -eq 'B')
+                            } Until ($1InnerMenu -eq 'B') Clear-Host
                         }
-                    '17' {
+                    '17' {Clear-Host
                             Do {
 @'
 
@@ -346,14 +348,14 @@ Do {
 '@
                                 $1InnerMenu = Read-Host -Prompt 'Enter 1 - 3 or B for Back'
                                 Switch ($1InnerMenu) {
-                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break}
-                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break}
+                                 '1' {Start-Process -FilePath "$env:softinsta\7z1900-x64.exe"; break; Clear-Host}
+                                 '2' {Start-Process -FilePath "$env:softinsta\7z1900.exe"; break; Clear-Host}
                                 }
-                            } Until ($1InnerMenu -eq 'B')
+                            } Until ($1InnerMenu -eq 'B') Clear-Host
                         }
                     
                 }
-            } Until ($1MainMenu -eq 'B')
+            } Until ($1MainMenu -eq 'B') Clear-Host
         }
     } # End Switch.
 } Until (
